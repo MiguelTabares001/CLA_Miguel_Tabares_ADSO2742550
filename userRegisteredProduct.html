@@ -67,9 +67,7 @@
                                <li class="nav-item">
                                   <a class="nav-link active" href="userRegisteredProduct.html">Products</a>
                                </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" href="cartUser.html">Cart</a>
-                               </li>
+                               
                                <li class="nav-item">
                                   <a class="nav-link" href="shopingHistory.html">Purchase History</a>
                                </li>     
@@ -92,121 +90,67 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- products -->
-      <div  class="products">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Our Products</h2>
-                  </div>
-               </div>
+      
+      
+
+     <!-- products -->
+<div class="products">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>Our Products</h2>
             </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="our_products">
-                     <div class="search-container">
-                        <input type="text" id="productSearch" placeholder="Search products..." style="margin-left: 60px;" >
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                     </div>
-                     <div class="row">
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product1.png" alt="#"/></figure>
-                              <h2>Desk combo</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product2.png" alt="#"/></figure>
-                              <h2>Accesories</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product3.png" alt="#"/></figure>
-                              <h2>Web Cam</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product4.png" alt="#"/></figure>
-                              <h2>Speakers</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product5.png" alt="#"/></figure>
-                              <h2>Modems</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="images/product6.png" alt="#"/></figure>
-                              <h2>Hard Disk</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product7.png" alt="#"/></figure>
-                              <h2>Memory RAM</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product8.png" alt="#"/></figure>
-                              <h2>Battery</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="images/product9.png" alt="#"/></figure>
-                              <h2>Disk</h2>
-                              <p>Description: Lorem ipsum dolor sit amet.</p>
-                              <p>Price: 1000$</p>
-                              <h3>Add To Cart</h3>
-                           </div>
-                        </div>
-
-
-                        <div class="col-md-12 text-center">
-                           <p>Products on Cart: </p>
-                        </div>
-
-                        <div class="col-md-12">
-                           <a class="read_more" href="cartUser.html">Go to Cart!</a>
-                        </div>
-                     </div>
-                  </div>
+         </div>
+      </div>
+      <div class="row" id="productos-container"> <!-- Cambié el id a "productos-container" para evitar duplicados -->
+         <div class="col-md-12">
+            <div class="our_products">
+               <div class="search-container">
+                  <input type="text" id="productSearch" placeholder="Search products..." style="margin-left: 60px;">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+               </div>
+               <div class="row" id="productos">
+                  <!-- Aquí se va a renderizar los productos de forma dinámica -->
+               </div>
+               <div class="col-md-12 text-center" id="carrito">
+                  <h2>Shopping Cart</h2>
+                  <ul id="items-carrito"></ul>
+                  <p>Total: $<span id="total-carrito">0</span></p>
+                  <button onclick="vaciarCarrito()">Empty Cart</button>
                </div>
             </div>
          </div>
       </div>
-      <!-- end products -->
+   </div>
+</div>
+<!-- end products -->
+
+<!-- Script para llamar a la función renderizarProductos -->
+<script>
+   // Llama a la función después de que el DOM se haya cargado
+   document.addEventListener('DOMContentLoaded', function () {
+     renderizarProductos();
+     actualizarCarrito();
+   });
+ </script>
+ 
+ <script>
+   // Array de productos
+   const productos = [
+     { id: 1, nombre: 'Desk-Combo', precio: 130000, imagen: './images/product1.png' },
+     { id: 2, nombre: 'Accesories', precio: 50000, imagen: './images/product2.png' },
+     { id: 3, nombre: 'Web Cam', precio: 200000, imagen: './images/product3.png' },
+     { id: 4, nombre: 'Speakers', precio: 320000, imagen: './images/product4.png' },
+     { id: 5, nombre: 'Modems', precio: 400000, imagen: './images/product5.png' },
+     { id: 6, nombre: 'Hard Disk', precio: 340000, imagen: './images/product6.png' },
+     { id: 7, nombre: 'Memory RAM', precio: 400000, imagen: './images/product7.png' },
+     { id: 8, nombre: 'Battery', precio: 50000, imagen: './images/product8.png' },
+     { id: 9, nombre: 'Disk', precio: 1000000, imagen: './images/product9.png' }
+   ];
+ </script>
+ 
+      
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -258,6 +202,9 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
+
+      <script src="funcionalidadUser/scriptCarrito.js"></script> <!--Llamado a las funciones del carrito-->
+
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
